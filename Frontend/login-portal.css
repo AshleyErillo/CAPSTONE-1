@@ -1,0 +1,244 @@
+/* Root variables */
+:root {
+  --primary-color: #b92121;
+  --secondary-color: #003f88;
+  --text-color: #333;
+  --background-color: #fcfcfc;
+  --button-hover: #980e0e;
+  --button-secondary-hover: #002b5e;
+}
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+  background: var(--background-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Wrapper and Sections */
+.login-portal-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Prevent internal scrolling */
+  background: var(--background-color);
+}
+
+.login-portal-content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  max-width: 1200px;
+  width: 100%;
+  height: 100%; /* Ensure it doesn't exceed viewport */
+  margin: auto;
+  padding: 40px 30px;
+  align-items: start;
+  background: var(--background-color);
+  flex: 1;
+  overflow: hidden; /* Prevent internal scroll */
+}
+
+/* Logo Section */
+.login-portal-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 75px;
+}
+
+.logo-image,
+.login-header-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.logo-text-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text {
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.logo-smart {
+  color: var(--primary-color);
+}
+
+.logo-support {
+  color: var(--secondary-color);
+}
+
+.logo-desc {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-top: 2px;
+}
+
+/* Left Content */
+.login-portal-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-right: 40px;
+  overflow: hidden;
+}
+
+.login-portal-text h1 {
+  color: var(--primary-color);
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0 0 15px;
+  line-height: 1.2;
+}
+
+.login-portal-text h2,
+.login-portal-text p {
+  color: var(--text-color);
+  margin: 10px 0 20px;
+}
+
+.login-portal-text h2 {
+  font-size: 2.2rem;
+  font-weight: normal;
+}
+
+.login-portal-text p {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+/* Buttons */
+.login-portal-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.login-portal-buttons button {
+  padding: 12px 40px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background: var(--primary-color);
+  transition: background-color 0.3s ease;
+}
+
+.login-portal-buttons button:first-of-type {
+  background: var(--secondary-color);
+}
+
+.login-portal-buttons button:first-of-type:hover {
+  background: var(--button-secondary-hover);
+}
+
+.login-portal-buttons button:last-of-type:hover {
+  background: var(--button-hover);
+}
+
+/* Right Content */
+.login-portal-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.login-portal-image {
+  width: 100%;
+  max-height: 800px;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-portal-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .login-portal-text {
+    padding: 0 10px;
+  }
+
+  .login-portal-buttons {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .login-portal-buttons button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .login-portal-image-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .login-portal-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .login-portal-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+  }
+
+  .logo-desc {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-portal-text h1 {
+    font-size: 2rem;
+  }
+
+  .login-portal-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .login-portal-text p {
+    font-size: 0.9rem;
+  }
+
+  .login-portal-buttons button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .logo-text {
+    font-size: 1.3rem;
+  }
+
+  .logo-desc {
+    font-size: 0.8rem;
+  }
+}

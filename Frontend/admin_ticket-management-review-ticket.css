@@ -1,0 +1,346 @@
+/* Modal Overlay */
+.admin-ticket-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.admin-ticket-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Main Modal Content */
+.admin-ticket-modal-content {
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal Header */
+.admin-ticket-modal-header {
+  background-color: #7c000c;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-ticket-modal-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.admin-ticket-modal-close-btn {
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.admin-ticket-modal-close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Modal Body */
+.admin-ticket-modal-body {
+  padding: 30px;
+  max-height: calc(90vh - 140px);
+  overflow-y: auto;
+}
+
+.employee-request-title {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Employee Info Section */
+.employee-info-section {
+  background-color: #d6d6d6;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  border-left: 4px solid #002853;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-group.half-width {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 13px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.form-input.readonly,
+.form-select.readonly,
+.form-textarea.readonly {
+  background-color: #e9e9e9;
+  color: #3d3d3d;
+  cursor: not-allowed;
+}
+
+.form-textarea {
+  resize: vertical;
+  line-height: 1.5;
+  min-height: 100px;
+}
+
+/* File Attachment */
+.file-attachment {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 50px;
+  background-color: #6c757d;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.file-attachment:hover {
+  background-color: #5a6268;
+}
+
+/* Action Buttons */
+.admin-ticket-modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+.reject-ticket-btn,
+.approve-ticket-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  min-width: 120px;
+  transition: all 0.2s ease;
+}
+
+.reject-ticket-btn {
+  background-color: #79000c;
+  color: white;
+}
+
+.reject-ticket-btn:hover {
+  background-color: #97000f;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.approve-ticket-btn {
+  background-color: #006618;
+  color: white;
+}
+
+.approve-ticket-btn:hover {
+  background-color: #008f1f;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Secondary Modal Styles (Approval and Rejection) */
+.secondary-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+
+.secondary-modal-content {
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.secondary-modal-header {
+  background-color: #7c000c;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.secondary-modal-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.secondary-modal-body {
+  padding: 24px;
+}
+
+.secondary-modal-body p {
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+.secondary-modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 100px;
+  transition: all 0.2s ease;
+}
+
+.secondary-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background-color: #5a6268;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.approve-btn {
+  background-color: #006618;
+  color: white;
+}
+
+.approve-btn:hover {
+  background-color: #008f1f;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reject-btn {
+  background-color: #79000c;
+  color: white;
+}
+
+.reject-btn:hover {
+  background-color: #97000f;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-ticket-modal-content,
+  .secondary-modal-content {
+    width: 95%;
+    margin: 20px;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .form-group.half-width {
+    margin-bottom: 20px;
+  }
+  
+  .admin-ticket-modal-actions,
+  .secondary-modal-actions {
+    flex-direction: column;
+  }
+  
+  .reject-ticket-btn,
+  .approve-ticket-btn,
+  .btn {
+    width: 100%;
+  }
+  
+  .employee-info-section {
+    padding: 12px;
+  }
+}

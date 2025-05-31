@@ -1,0 +1,211 @@
+/* Ticket Toolbar Container */
+.ticket-management-filters-and-sort-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 12px;
+  width: 100%;
+}
+
+/* Filter Section */
+.ticket-management-filter-section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Sort Section */
+.ticket-management-sort-section {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+/* Labels */
+.ticket-management-filter-label,
+.ticket-management-sort-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-right: 4px;
+}
+
+.ticket-management-sort-label {
+  transform: translateY(7px);
+}
+
+/* Dropdown Wrapper */
+.ticket-management-filter-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Shared Dropdown Select Styles */
+.ticket-management-filter-select {
+  width: 150px;
+  height: 36px;
+  padding: 0 28px 0 10px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  appearance: none;
+}
+
+.ticket-management-filter-select:focus {
+  border-color: #007bff;
+}
+
+.ticket-management-filter-select:disabled {
+  background-color: #f1f1f1;
+  color: #999;
+}
+
+/* Dropdown Icon Styles */
+.ticket-management-filter-dropdown-icon,
+.ticket-management-filter-date-dropdown-icon {
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+  color: #666;
+  height: 16px;
+  width: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket-management-filter-dropdown-icon {
+  transform: translateY(-40px);
+}
+
+.ticket-management-filter-date-dropdown-icon {
+  top: 30%;
+}
+
+/* Date Filter Wrapper */
+.ticket-management-date-filter-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Date Button */
+.ticket-management-date-filter-button {
+  width: 150px;
+  height: 36px;
+  padding: 0 28px 0 10px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transform: translateY(-8px);
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.ticket-management-date-filter-button:hover {
+  background-color: #fff;
+  border-color: #4a90e2;
+  color: #2a4abf;
+}
+
+.ticket-management-date-filter-button:focus {
+  border-color: #2a4abf;
+  background-color: #fff;
+  color: #1a3080;
+  outline: none;
+}
+
+/* Inline Date Filter Styles */
+.ticket-management-date-filter-inline {
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Updated Sort Dropdown Styles */
+.ticket-management-sort-dropdown {
+  position: relative;
+}
+
+/* Button to mimic dropdown look */
+.ticket-management-custom-select-button {
+  width: 180px;
+  height: 36px;
+  padding: 0 10px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.ticket-management-custom-select-button:hover {
+  background-color: #fff;
+  border-color: #4a90e2;
+  color: #2a4abf;
+}
+
+.ticket-management-custom-select-button:focus {
+  border-color: #2a4abf;
+  background-color: #ffffff;
+  color: #1a3080;
+  outline: none;
+}
+
+/* Arrow + label wrapper */
+.ticket-management-sort-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ticket-management-sort-arrow-icon {
+  transform: translateY(3px);
+}
+
+/* Dropdown menu below the button */
+.ticket-management-custom-dropdown-menu {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 180px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.ticket-management-custom-dropdown-menu li {
+  width: 180px;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.ticket-management-custom-dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
